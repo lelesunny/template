@@ -1,0 +1,33 @@
+[{
+	"name" : "Active Users",
+	"glyphicon" : "glyphicon glyphicon-repeat",
+	"period" : "1500ms",
+	"count" : 33,
+	"percentage" : "28%",
+	"color" : "orange"
+},
+{
+	"name" : "Total Users",
+	"glyphicon" : "glyphicon glyphicon-user",
+	"period" : "This Year",
+	"count" : 5033,
+	"percentage" : "28%",
+	"color" : "green"
+},
+{
+	"name" : "Profit",
+	"glyphicon" : "glyphicon glyphicon-usd",
+	"period" : "Projected",
+	"count" : "$98233",
+	"percentage" : "48%",
+	"color" : "blue"
+},
+{
+	"name" : "Returns",
+	"glyphicon" : "glyphicon glyphicon-retweet",
+	"period" : "This Year",
+	"count" : 33,
+	"percentage" : "28%",
+	"color" : "red" 
+}
+]

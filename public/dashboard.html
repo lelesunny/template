@@ -1,0 +1,90 @@
+	<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<h2>
+				<div class="col-md-6">
+
+						<i class="glyphicon glyphicon-dashboard"></i> 
+						{{title}}
+						<small><i class='glyphicon glyphicon-info-sign text-primary' data-toggle="tooltip" title="{{tooltip}}"></i></small>
+
+				</div>
+			 	<div class="col-md-3 input-group">
+			 		<span class="input-group-btn btn-primary"> </span>
+					<small><input class="form-control" type="text" ng-model="model" placeholder="Search" style="border-color: #286090;"></small>
+				</div>
+			</h2>
+		</div>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+		
+		</div>
+
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-4" ng-repeat="tile in topTiles">
+				<div class="tile" ng-class="tile.color" ng-click="tileClicked(tile.name)">
+					<span class="col-md-4" ng-class="tile.glyphicon" style="font-size:5em"></span>
+					<span class="col-md-8">
+						<h3 class="title">
+							<span>{{tile.name}}</span>
+							<span class="pull-right">{{tile.count}}</span>
+						</h3>
+        				<p>
+        					<span>{{tile.period}}</span>
+        					<span class="badge pull-right">{{tile.percentage}}</span>
+        				</p>
+        			</span>
+				</div>
+			</div>
+			
+		</div>
+<!-- 		<div class="row">
+			<div class="col-sm-4" ng-controller="barCtrl">
+				<canvas class="chart chart-bar" chart-data="data" chart-labels="labels">
+				</canvas>
+
+			</div>
+			<div class="col-sm-3" ng-controller="doughCtrl" style="width:400px;height:250px">
+				<canvas class="chart chart-doughnut" chart-data="data" chart-labels="labels">
+				</canvas>
+			</div>
+			
+		</div> -->
+
+		<iframe ng-src="{{currView}}" frameborder="0" width="100%" height="250px" scrolling="yes"></iframe>
+
+		<div class="row">
+			<div class="col-sm-3">
+				<div ng-repeat="tile in sideTiles" style="clear:both">
+				<div class="tile" ng-class="tile.color" style="margin-top:10px; magrin-bottom:10px;">
+					<div class="col-md-4" ng-class="tile.glyphicon" style="font-size:4em;"></div>
+					<div class="col-md-8">
+						<h4 class="title">
+							<span>{{tile.name}}</span>
+							<span class="pull-right">{{tile.count}}</span>
+						</h4>
+        				<p>
+        					<span>{{tile.period}}</span>
+        					<span class="badge pull-right">{{tile.percentage}}</span>
+        				</p>
+        			</div>
+				</div>
+			</div>
+			</div>
+			
+			
+<!-- 			<div class="col-sm-8" ng-controller="lineCtrl" style="float:left;padding:10px 0px 0px 40px">
+				<canvas id="line" class="chart chart-line" chart-data="data"
+				  chart-labels="labels" chart-legend="true" chart-series="series">
+				</canvas> 
+			</div> -->
+
+			<div class="col-sm-9">
+				<iframe ng-src="{{currView2}}" frameborder="0" width="100%" height="550px" scrolling="no"></iframe>
+			</div>
+		</div>
+	</div>
+</div>

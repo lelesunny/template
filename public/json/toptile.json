@@ -1,0 +1,25 @@
+[{
+	"name" : "Sales",
+	"glyphicon" : "glyphicon glyphicon-dashboard",
+	"period" : "This Week",
+	"count" : 233,
+	"percentage" : "-48%",
+	"color" : "blue"
+},
+{
+	"name" : "Downloads",
+	"glyphicon" : "glyphicon glyphicon-th-list",
+	"period" : "This Year",
+	"count" : 233,
+	"percentage" : "98%",
+	"color" : "green"
+},
+{
+	"name" : "Comments",
+	"glyphicon" : "glyphicon glyphicon-file",
+	"period" : "This Month",
+	"count" : 2987,
+	"percentage" : "78%",
+	"color" : "orange"
+}
+]

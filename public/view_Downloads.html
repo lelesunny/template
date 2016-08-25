@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="node_modules/angular-chart.js/dist/angular-chart.css">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+        <script type="text/javascript" src="node_modules/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript" src="node_modules/Chart.js/Chart.js"></script>
+        <script type="text/javascript" src="node_modules/angular-chart.js/dist/angular-chart.js"></script>
+        <script type="text/javascript" src="node_modules/highcharts/highcharts.js"></script>
+    	<script>
+    		(function(){
+    			angular.module('main',['chart.js'])
+    				.controller('doughCtrl', ['$scope', function($scope){
+    					$scope.data = JSON.parse(localStorage.getItem('data'));
+    					$scope.label = JSON.parse(localStorage.getItem('label'));
+    				}]);
+    		})();
+    	</script>
+    </head>
+    <body ng-app="main">
+    	<div class="row" ng-controller="doughCtrl">
+    		<div class="col-sm-4" style="display:inline-block;">
+    			<canvas class="chart chart-bar" chart-data="data" chart-labels="label"></canvas>
+    		</div>
+    		<div class="col-sm-3" style="display:inline-block;">
+    			<canvas class="chart chart-doughnut" chart-data="data[0]" chart-labels="label"></canvas>
+    		</div>
+    		<div class="col-sm-3" style="display:inline-block;">
+    			<canvas class="chart chart-doughnut" chart-data="data[0]" chart-labels="label"></canvas>
+    		</div>
+    	</div>
+    </body>
+</html>

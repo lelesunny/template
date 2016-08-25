@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="node_modules/angular-chart.js/dist/angular-chart.css">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+        <script type="text/javascript" src="node_modules/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript" src="node_modules/Chart.js/Chart.js"></script>
+        <script type="text/javascript" src="node_modules/angular-chart.js/dist/angular-chart.js"></script>
+        <script type="text/javascript" src="node_modules/highcharts/highcharts.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div class= "container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-xm-2" ng-controller="colCtrl" ng-class="menuClass" >
+                    <div class="panel panel-primary" style="height:100%;">
+                        <div class="panel-heading text-right" ng-click="showMenu()"><i class="glyphicon glyphicon-chevron-right"></i></div>
+                        <div class="panel-body " ng-show="menuVisibility" >
+                            <ul class="nav nav-pills nav-stacked navbar-left">
+                                <li ng-repeat="col in cols">
+                                    <a href="#dashboard">
+                                        <i ng-class="col.glyphicon"></i> 
+                                        {{col.name}} 
+                                        <span class="badge pull-right" ng-hide="col.count==0">{{col.count}}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 col-xm-10">
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

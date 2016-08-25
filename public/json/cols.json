@@ -1,0 +1,21 @@
+[{
+	"name" : "DashBoard",
+	"glyphicon" : "glyphicon glyphicon-dashboard",
+	"count" : 0
+},
+{
+	"name" : "Top Navbar",
+	"glyphicon" : "glyphicon glyphicon-th-list",
+	"count" : 0
+},
+{
+	"name" : "Front End",
+	"glyphicon" : "glyphicon glyphicon-file",
+	"count" : 2
+},
+{
+	"name" : "Email Templates",
+	"glyphicon" : "glyphicon glyphicon-envelope",
+	"count" : 4
+}
+]
